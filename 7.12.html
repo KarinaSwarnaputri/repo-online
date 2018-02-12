@@ -1,0 +1,21 @@
+<form id="form">
+        Ketik Kalimat: <input type="text">
+        <br></br>
+        Karakter yang dicari: <input type="text">
+        <br>
+    </form>
+    
+    <button onclick="fungsiKu()">Cari!</button>
+    <p id = "tes"> Hasil </p>
+    
+    <script>
+        function fungsiKu(){
+           let input1 = document.getElementById("form").elements[0].value;
+           let input2 = document.getElementById("form").elements[1].value;
+            
+           let ganti = new RegExp(input2, 'g')
+           let kata2 = input1.replace(ganti,'')
+           let jumlah = input1.length - kata2.length
+        document.getElementById("tes").innerHTML= '<b>Jumlah \''+input2+ '\' sebanyak '+jumlah +' buah</b>';
+        }
+    </script>

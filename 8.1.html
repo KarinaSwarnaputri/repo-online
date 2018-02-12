@@ -1,0 +1,55 @@
+<center>
+    <h1> Kalkulator Sederhana </h1>
+<form id = "form">
+    Masukan angka 1: <input type= "number"><br><br>
+    Masukan angka 2:<input type= "number"><br>
+</form>
+
+<button onclick="kali()">Kali x </button>&nbsp;
+<button onclick="bagi()">Bagi :</button>&nbsp;
+<button onclick="tambah()">Tambah + </button>&nbsp;
+<button onclick="kurang()">Kurang - </button>&nbsp;
+<br><br>
+<button onclick="modulus()">Modulus %</button>&nbsp;
+<button onclick="pangkat()">Pangkat ^ </button>&nbsp;
+
+<p id ="hasil"> Hasil </p>
+</center>
+<script>
+
+function kali(){
+    let input1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1*input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' x '+ input2+' = '+output+'</b>';}
+
+function bagi(){
+    let input1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1/input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' : '+ input2+' = '+output+'</b>';}
+
+function tambah(){
+    let input1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1+input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' + '+ input2+' = '+output+'</b>';}
+
+function kurang(){
+    let input1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1-input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' - '+ input2+' = '+output+'</b>';}
+
+function modulus(){
+    let input1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1%input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' % '+ input2+' = '+output+'</b>';}
+
+function pangkat(){
+    let iput1 = document.getElementById("form").elements[0].value;
+    let input2 = document.getElementById("form").elements[1].value;
+    let output = input1^input2
+    document.getElementById("hasil").innerHTML = '<b>'+input1+' ^ '+ input2+' = '+output+'</b>';}
+</script>

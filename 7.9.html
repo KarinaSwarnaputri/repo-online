@@ -1,0 +1,29 @@
+<input id = "a1" type= "checkbox"
+onclick = "fungsiKu1(this.value)" value= "Pria">Pria
+<input id = "a2" type= "checkbox"
+onclick = "fungsiKu1(this.value)" value= "Wanita">Wanita
+
+<br></br>
+<button id= "klikini" onclick="fungsiKu2(this.value)">Klik</button>
+<p id ="output"></p>
+
+<script>
+    function fungsiKu1(x){
+        if(document.getElementById("a1").checked==true &&
+        document.getElementById("a2").checked==false){
+        document.getElementById("klikini").value= 'Pria'}
+
+        else if (document.getElementById("a1").checked==false &&
+        document.getElementById("a2").checked==true){
+        document.getElementById("klikini").value = 'Wanita'}
+
+        else if (document.getElementById("a1").checked==true &&
+        document.getElementById("a2").checked==true){
+        document.getElementById("klikini").value = 'Pria & Wanita'}
+        
+        else{document.getElementById("klikini").value=''}
+    }
+
+        function fungsiKu2(y){
+            document.getElementById("output").innerHTML=y}
+</script>

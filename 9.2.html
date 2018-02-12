@@ -1,0 +1,124 @@
+<!DOCTYPE html><html><head><title>Purwadhika</title>
+    <style>
+    table{
+        width: 60%;
+        border: 1px solid black;
+        border-collapse: collapse;}
+    th, td{
+        height: 40px;
+        border: 1px solid black;
+        border-collapse: collapse;}
+    </style>
+    </head></html>
+        <form id= "form">
+        Nama: <input type="text"> &nbsp; Nilai: <input type="text">
+        <br><br>
+        Nama: <input type="text"> &nbsp; Nilai: <input type="text">
+        <br><br>
+        Nama: <input type="text"> &nbsp; Nilai: <input type="text">
+        <br><br>
+    </form>
+    
+    <button onclick="namaNaik()">Urutkan Nama Naik</button>
+    <button onclick="namaTurun()">Urutkan Nama Turun</button>
+    <button onclick="nilaiNaik()">Urutkan Nilai Naik</button>
+    <button onclick="nilaiTurun()">Urutkan Nilai Turun</button>
+    <table id = "tabel"></table>
+    
+    <script>
+    function namaNaik(){
+                let input1 = document.getElementById("form").elements[0].value;
+                let input2 = document.getElementById("form").elements[1].value;
+                let input3 = document.getElementById("form").elements[2].value;
+                let input4 = document.getElementById("form").elements[3].value;
+                let input5 = document.getElementById("form").elements[4].value;
+                let input6 = document.getElementById("form").elements[5].value;
+
+                let array = [
+                    {nama: input1, nilai: input2},
+                    {nama: input3, nilai: input4},
+                    {nama: input5, nilai: input6},]
+                
+                array.sort(function(x,y){
+                    if(x.nama<y.nama){return -1}
+                    if(x.nama>y.nama){return 1}
+                    return 0})
+
+                document.getElementById("tabel").innerHTML= 
+                '<tr><th>&nbsp&nbspNama&nbsp&nbsp</th><th>&nbsp&nbspNilai&nbsp&nbsp</th></tr>'+
+                '<tr><th>'+array[0].nama+'</th><th>'+array[0].nilai+'</th></tr>'+
+                '<tr><th>'+array[1].nama+'</th><th>'+array[1].nilai+'</th></tr>'+
+                '<tr><th>'+array[2].nama+'</th><th>'+array[2].nilai+'</th></tr>'}
+    
+    function namaTurun(){
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            let input3 = document.getElementById("form").elements[2].value;
+            let input4 = document.getElementById("form").elements[3].value;
+            let input5 = document.getElementById("form").elements[4].value;
+            let input6 = document.getElementById("form").elements[5].value;
+
+            let array = [
+            {nama: input1, nilai: input2},
+            {nama: input3, nilai: input4},
+            {nama: input5, nilai: input6}]
+                
+            array.sort(function(x,y){
+                if(y.nama<x.nama){return-1}
+                if(y.nama>x.nama){return 1}
+                return 0})
+
+            document.getElementById("tabel").innerHTML= 
+            '<tr><th>&nbsp&nbspNama&nbsp&nbsp</th><th>&nbsp&nbspNilai&nbsp&nbsp</th></tr>'+
+            '<tr><th>'+array[0].nama+'</th><th>'+array[0].nilai+'</th></tr>'+
+            '<tr><th>'+array[1].nama+'</th><th>'+array[1].nilai+'</th></tr>'+
+            '<tr><th>'+array[2].nama+'</th><th>'+array[2].nilai+'</th></tr>'
+        }
+
+    function nilaiNaik(){
+        let input1 = document.getElementById("form").elements[0].value;
+        let input2 = document.getElementById("form").elements[1].value;
+        let input3 = document.getElementById("form").elements[2].value;
+        let input4 = document.getElementById("form").elements[3].value;
+        let input5 = document.getElementById("form").elements[4].value;
+        let input6 = document.getElementById("form").elements[5].value;
+
+        let array = [
+            {nama: input1, nilai: input2},
+            {nama: input3, nilai: input4},
+            {nama: input5, nilai: input6},]
+                
+            array.sort(function(x,y){return x.nilai-y.nilai} )
+               
+
+            document.getElementById("tabel").innerHTML= 
+            '<tr><th>&nbsp&nbspNama&nbsp&nbsp</th><th>&nbsp&nbspNilai&nbsp&nbsp</th></tr>'+
+            '<tr><th>'+array[0].nama+'</th><th>'+array[0].nilai+'</th></tr>'+
+            '<tr><th>'+array[1].nama+'</th><th>'+array[1].nilai+'</th></tr>'+
+            '<tr><th>'+array[2].nama+'</th><th>'+array[2].nilai+'</th></tr>'}
+
+    function nilaiTurun(){
+        let input1 = document.getElementById("form").elements[0].value;
+        let input2 = document.getElementById("form").elements[1].value;
+        let input3 = document.getElementById("form").elements[2].value;
+        let input4 = document.getElementById("form").elements[3].value;
+        let input5 = document.getElementById("form").elements[4].value;
+        let input6 = document.getElementById("form").elements[5].value;
+
+        let array = [
+        {nama: input1, nilai: input2},
+        {nama: input3, nilai: input4},
+        {nama: input5, nilai: input6},]
+                
+        array.sort(function(x,y){return y.nilai-x.nilai} )
+            
+
+        document.getElementById("tabel").innerHTML= 
+        '<tr><th>&nbsp&nbspNama&nbsp&nbsp</th><th>&nbsp&nbspNilai&nbsp&nbsp</th></tr>'+
+        '<tr><th>'+array[0].nama+'</th><th>'+array[0].nilai+'</th></tr>'+
+        '<tr><th>'+array[1].nama+'</th><th>'+array[1].nilai+'</th></tr>'+
+        '<tr><th>'+array[2].nama+'</th><th>'+array[2].nilai+'</th></tr>'}
+    </script>
+    </body>
+    </html>
+                

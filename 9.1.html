@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><title>Purwadhika</title>
+<style>
+table{
+    width: 60%;
+    border: 1px solid black;
+    border-collapse: collapse;}
+th, td{
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;}
+</style>
+</head></html>
+    <form id= "form">
+    Nama: <input type="text">
+    <br><br>
+    Tgl Lahir: <input type="text">
+    <br><br>
+    Alamat: <input type="text">
+    <br><br>
+</form>
+
+<button onclick="fungsiKu()">Bikin Tabel</button>
+<table id = "tabel"></table>
+
+<script>
+function fungsiKu(){
+            var input1 = document.getElementById("form").elements[0].value;
+            var input2 = document.getElementById("form").elements[1].value;
+            var input3 = document.getElementById("form").elements[2].value;
+            document.getElementById("tabel").innerHTML= 
+            '<tr><th>&nbsp&nbspNama&nbsp&nbsp</th><th>&nbsp&nbspTgl.Lahir&nbsp&nbsp</th><th>&nbsp&nbspAlamat&nbsp&nbsp</th></tr>'+
+            '<tr><th>'+input1+'</th><th>'+input2+'</th><th>'+input3+'</th></tr>';}
+</script>
+</body>
+</html>
+            

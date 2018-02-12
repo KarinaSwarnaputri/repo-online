@@ -1,0 +1,60 @@
+
+    <p><b>1. Siapakah Presiden Ketiga Republik Indonesia?</b><br><br>
+      
+            <input type= "radio" name="presiden" onclick="pres(this.value)" value=1> <b><i>Prof.B.J.Habibie</i></b>&nbsp;&nbsp;
+            <input type= "radio" name="presiden" onclick="pres(this.value)" value=0> Abdurrahman wahid&nbsp;&nbsp;
+            <input type= "radio" name="presiden" onclick="pres(this.value)" value=0> Ir Soekarno&nbsp;&nbsp;
+            <input type= "radio" name="presiden" onclick="pres(this.value)" value=0> Joko Widodo&nbsp;&nbsp;
+            <br><br>
+    <p><b>2. Berikut adalah nama-nama bahasa pemrograman, kecuali...</b><br><br>
+      
+            <input type= "radio" name="program" onclick="prog(this.value)" value=0> Python&nbsp;&nbsp;
+            <input type= "radio" name="program" onclick="prog(this.value)" value=1> <b><i>Micro:bit</i></b>&nbsp;&nbsp;
+            <input type= "radio" name="program" onclick="prog(this.value)" value=0> JavaScript&nbsp;&nbsp;
+            <input type= "radio" name="program" onclick="prog(this.value)" value=0> HTML&nbsp;&nbsp;
+            <br><br>
+     <p><b>3. Apakah judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Vallen?</b><br><br>
+       
+            <input type= "radio" name="lagu" onclick="lagu(this.value)" value=0> Qing Fei De Yi&nbsp;&nbsp;
+            <input type= "radio" name="lagu" onclick="lagu(this.value)" value=0> Ting Hai&nbsp;&nbsp;
+            <input type= "radio" name="lagu" onclick="lagu(this.value)" value=1> <b><i>Mirai E Kiroro</i></b>&nbsp;&nbsp;
+            <input type= "radio" name="lagu" onclick="lagu(this.value)" value=0> Hau Siang Hau siang&nbsp;&nbsp;
+            <br><br>
+    <p><b>4. Siapakah sosok di balik topeng Batman?</b><br><br>
+        
+                <input type= "radio" name="batman" onclick="pilih(this.value)" value=0> Natasha Romanov&nbsp;&nbsp;
+                <input type= "radio" name="batman" onclick="pilih(this.value)" value=0> Peter Parker&nbsp;&nbsp;
+                <input type= "radio" name="batman" onclick="pilih(this.value)" value=0> Tony Stark&nbsp;&nbsp;
+                <input type= "radio" name="batman" onclick="pilih(this.value)" value=1> <b><i></i>Bruce Wayne</i></b>&nbsp;&nbsp;
+                <br><br>
+ 
+ <button id="klikini" onclick="nilai()"> S U B M I T </button>
+ <p id="soal1"></p>
+ <p id="soal2"></p>
+ <p id="soal3"></p>
+ <p id="soal4"></p>
+ <p id="output"></p>
+
+<script>
+    function pres(x){
+        document.getElementById('soal1').value = parseInt(x)*25
+    }
+    function prog(x){
+        document.getElementById('soal2').value = parseInt(x)*25
+    }
+    function lagu(x){
+        document.getElementById('soal3').value = parseInt(x)*25
+    }
+    function pilih(x){
+        document.getElementById('soal4').value = parseInt(x)*25
+    }
+    function nilai(){
+        var nilai1 = parseInt(document.getElementById("soal1").value)
+        var nilai2 = parseInt(document.getElementById("soal2").value)
+        var nilai3 = parseInt(document.getElementById("soal3").value)
+        var nilai4 = parseInt(document.getElementById("soal4").value)
+        var total = nilai1+nilai2+nilai3+nilai4
+        document.getElementById("output").innerHTML = '<h1> Nilai akhir anda' + total+'</h1>'
+    }
+</script>
+

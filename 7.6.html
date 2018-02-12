@@ -1,0 +1,23 @@
+<form id="form">
+        <p>Nama: <input type = "text">
+        <br>
+        <p>Age:<input type = "number">
+        <p>Sex:
+                <input type= "radio" name="sex" onclick="pilih(this.value)" value = "Pria"> Pria
+                <input type= "radio" name="sex" onclick="pilih(this.value)" value= "Wanita">Wanita
+     </form>
+     <br>
+     <button id="klikini" onclick="klik()"> Coba Klik! </button>
+     <p id= "tes"> Hasil </p>
+
+<script>
+        function pilih(opsi){document.getElementById("klikini").value=opsi;}
+        function klik(){let input1 = document.getElementById("form").elements[0].value;
+        let input2 = document.getElementById("form").elements[1].value;
+       let input3 = document.getElementById("klikini").value;
+        console.log('Nama: '+input1);
+        console.log('Age: '+input2);
+        console.log('Sex: '+input3);
+        document.getElementById("tes").innerHTML= 'Name: '+input1+ '<br> Age: '+input2+ '<br> Sex: '+input3;}
+    </script>
+

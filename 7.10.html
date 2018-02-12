@@ -1,0 +1,15 @@
+<form id="form">
+    Masukan Angka: <input type="number">
+    <br>
+</form>
+
+<button onclick="fungsiKu()">Kuadratkan!</button>
+<p id = "hasil"> Hasil </p>
+
+<script>
+    function fungsiKu(){
+        var x = document.getElementById("form").elements[0].value;
+        var y = Math.pow(x,2)
+        document.getElementById("hasil").innerHTML= 'Hasil ' +x+'<sup>2</sup>= '+y
+    }
+</script>

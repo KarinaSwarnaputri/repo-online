@@ -1,0 +1,12 @@
+<input id= "a1" type="radio" onclick="fungsiKu1(this.value)"
+value = "Pria"> Pria
+<br>
+<p id= "output">Ok</p>
+
+<script>
+    function fungsiKu1(y){
+        if(document.getElementById("a1").checked==true){
+        document.getElementById("output").innerHTML = y}
+       else{document.getElementById("output").innerHTML = ''}
+    }
+</script>

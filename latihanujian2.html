@@ -1,0 +1,40 @@
+<center>
+        <b><h1> FPB dan KPK </h1></b>
+        <b><h4>Faktor Persekutuan Besar & Kelipatan Persekutuan Kecil</h4></b>
+    <form id = "form">
+        Masukan angka 1: <input type= "number"><br><br>
+        Masukan angka 2:<input type= "number"><br>
+    </form>
+    <br><br>
+    <button onclick="hitung()">Hitung FPB & KPK </button>
+    <br><br>
+    <p id ="hasil"></p>
+</center>
+
+<script>
+    function hitung(){
+    let x=parseInt(document.getElementById("form").elements[0].value);
+    let y=parseInt(document.getElementById("form").elements[1].value);
+    let output = new fpbkpk(x,y)
+    }
+
+    function fpbkpk(x,y){
+        this.x=x
+        this.y=y
+        this.hasil=function(x,y){
+            let c;
+            let d;
+            let e;
+            let KPK;
+            let FPB=0;
+            for(c=1;c<=this.x;c++){
+                d=this.x%c;
+                e=this.y%c;
+                if(d==e && e==0){FPB=c;}
+            }
+            KPK=(this.x*this.y)/FPB;
+            return'<h1>FPB= '+FPB+' dan KPK= '+KPK+'</h1>'
+        }
+        document.getElementById("hasil").innerHTML=this.hasil()
+    }
+</script>
